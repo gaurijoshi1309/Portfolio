@@ -3,6 +3,11 @@ import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
 import "../styles/Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [result, setResult] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
