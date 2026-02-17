@@ -7,16 +7,16 @@ const Projects = () => {
     {
       id: 1,
       title: "Meal Mitra (Smart Food Donation Webapp)",
-      image: "https://placehold.co/600x400/0f172a/white?text=Meal+Mitra",
+      image: "/assets/Mealmitra.png",
       tags: ["QA", "Functional Testing", "Integration Testing"],
-      link: "#",
+      link: "https://github.com/gaurijoshi1309/meal-mitra",
     },
     {
       id: 2,
       title: "Load & Stress Testing of User Auth",
-      image: "https://placehold.co/600x400/1e293b/white?text=Load+Testing",
+      image: "/assets/Loadtesting.jpg",
       tags: ["JMeter", "Performance Testing", "Scalability"],
-      link: "#",
+      link: "https://github.com/gaurijoshi1309/load-testing-project",
     },
   ];
 
@@ -34,13 +34,14 @@ const Projects = () => {
             className="project-card"
             spotlightColor="rgba(99, 102, 241, 0.15)"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-image"
-              loading="lazy"
-              decodings="async"
-            />
+            <div className="project-image">
+              <img
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                decodings="async"
+              />
+            </div>
             <div className="project-info">
               <div className="project-tags">
                 {project.tags.map((tag, index) => (
@@ -50,7 +51,12 @@ const Projects = () => {
                 ))}
               </div>
               <h3 className="project-title">{project.title}</h3>
-              <a href="#" className="project-link">
+              <a
+                href={project.link}
+                className="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View Project
               </a>
             </div>

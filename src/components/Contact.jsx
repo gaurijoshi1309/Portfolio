@@ -3,11 +3,8 @@ import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
 import "../styles/Contact.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [result, setResult] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -16,12 +13,43 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., console.log usually for static sites)
-    console.log("Form submitted:", formData);
-    alert("Message sent! (This is a demo)");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+    setResult("Sending....");
+
+    const submissionData = {
+      ...formData,
+      access_key: "YOUR_ACCESS_KEY_HERE", // User needs to replace this
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Message Sent Successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    } catch (error) {
+      console.log("Error", error);
+      setResult("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+      // Clear success message after 5 seconds
+      setTimeout(() => setResult(""), 5000);
+    }
   };
 
   return (
@@ -111,9 +139,20 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button
+              type="submit"
+              className="submit-btn"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
+            {result && (
+              <p
+                className={`form-result ${result.includes("Successfully") ? "success" : "error"}`}
+              >
+                {result}
+              </p>
+            )}
           </form>
         </div>
 

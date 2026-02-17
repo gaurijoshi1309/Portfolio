@@ -10,6 +10,7 @@ import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import ThemeToggle from "./components/ThemeToggle.jsx";
 import Navbar from "./components/Navbar.jsx";
+import FadeInSection from "./components/FadeInSection.jsx";
 import "./styles/App.css";
 
 function App() {
@@ -39,27 +40,41 @@ function App() {
         <div id="hero">
           <Hero />
         </div>
-        <div id="about">
-          <About />
-        </div>
-        <div id="experience">
-          <Experience />
-        </div>
-        <div id="skills">
-          <Skills />
-        </div>
-        <div id="projects">
-          <Projects />
-        </div>
-        <div id="certificates">
-          <Certificates />
-        </div>
-        <div id="hackathons">
-          <Hackathons />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
+        <FadeInSection>
+          <div id="about">
+            <About />
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div id="experience">
+            <Experience />
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div id="skills">
+            <Skills />
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div id="projects">
+            <Projects />
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div id="certificates">
+            <Certificates />
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div id="hackathons">
+            <Hackathons />
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div id="contact">
+            <Contact />
+          </div>
+        </FadeInSection>
       </div>
     </>
   );
