@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Manrope:wght@200..800&family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+  /* Typography */
+  --font-header: "Sora", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-script: "Dancing Script", cursive;
+  
+  /* Color Palette - Professional Navy & Slate */
+  --color-navy-900: #0F172A;
+  --color-navy-800: #1E293B;
+  --color-navy-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748B;
+  --color-indigo-600: #4F46E5;
+  --color-indigo-500: #6366F1;
+  
+  /* Semantic Variables */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8FAFC;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-brand: var(--color-indigo-600);
+  --color-card-bg: #FFFFFF;
+  --color-border: #E2E8F0;
+  
+  /* Legacy/Common for smooth transition */
+  --color-lavender: var(--color-brand);
+  --color-peach: var(--color-bg-secondary);
+  --color-text-light: #FFFFFF;
+}
+
+[data-theme='dark'] {
+  --color-bg-primary: #0F172A;
+  --color-bg-secondary: #1E293B;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-brand: var(--color-indigo-500);
+  --color-card-bg: #1E293B;
+  --color-border: #334155;
+  
+  --color-lavender: var(--color-brand);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button {
+  font-family: var(--font-header);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+

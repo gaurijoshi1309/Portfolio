@@ -1,0 +1,27 @@
+.spotlight-card {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card-bg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.spotlight-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.spotlight-content {
+  position: relative;
+  z-index: 2;
+}
+
+.spotlight-card:hover {
+  border-color: var(--color-brand);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}

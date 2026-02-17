@@ -1,0 +1,5 @@
+/* Component specific styles can go here or in component files */
+.app-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
