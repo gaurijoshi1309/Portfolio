@@ -93,6 +93,7 @@
   font-family: var(--font-body);
   font-size: 0.95rem;
   background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
 }
 
 .form-textarea {
@@ -177,7 +178,7 @@
   .form-input:focus, .form-textarea:focus {
     outline: none;
     border-color: var(--color-brand);
-    background: white;
+    background: var(--color-bg-primary);
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
   }
 
