@@ -1,16 +1,58 @@
-# React + Vite
+# Gauri Joshi | Software Testing Engineer & Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-end portfolio website built with React and Vite, showcasing technical expertise in Quality Assurance, Automation, and Development.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Mobile-First Design**: Fully responsive across all devices (phones, tablets, and desktops).
+- **Smooth Animations**: Integrated with Framer Motion and Locomotive Scroll for a cinematic, premium feel.
+- **Section Reveal**: Smooth fade-in and slide-up animations as you scroll.
+- **Dark & Light Mode**: Seamless theme switching for a customized viewing experience.
+- **Live Contact Form**: Powered by Web3Forms for free, direct-to-inbox email notifications.
+- **Project Showcases**: Professional grid display of key projects with external links to GitHub.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React.js
+- **Build Tool**: Vite
+- **Styling**: Vanilla CSS (Custom Variable System)
+- **Animations**: Framer Motion & Locomotive Scroll v5
+- **Icons**: React Icons (Lucide, Font Awesome)
 
-## Expanding the ESLint configuration
+## 📦 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Prerequisite
+
+Ensure you have [Node.js](https://nodejs.org/) installed on your system.
+
+### 2. Installation
+
+Clone the repository and install the dependencies:
+
+```bash
+npm install
+```
+
+### 3. Local Development
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+### 4. Contact Form Setup
+
+To make the contact form live:
+
+1. Get a free access key from [web3forms.com](https://web3forms.com/).
+2. Create a `.env` file in the root directory.
+3. Add your key: `VITE_WEB3FORMS_ACCESS_KEY=your_key_here`
+
+## 🚀 Deployment
+
+The project is ready to be deployed on platforms like **Vercel** or **Netlify**. Simply connect your GitHub repository and the build command should be automatically detected (`npm run build`).
+
+---
+
+Developed by **Antigravity** for **Gauri Joshi**
