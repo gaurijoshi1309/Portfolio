@@ -25,7 +25,7 @@ const Contact = () => {
 
     const submissionData = {
       ...formData,
-      access_key: "YOUR_ACCESS_KEY_HERE", // User needs to replace this
+      access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
     };
 
     try {
