@@ -6,14 +6,36 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Devion AI – Autonomous Code Review & Self-Healing System",
+      description:
+        "A multi-agent system built with LangGraph and FastAPI that autonomously clones a repository, runs tests, analyzes failures, and pushes fixes.",
+      image: "/assets/devion-ai.png",
+      tags: ["LangGraph", "FastAPI", "AI Agents", "Python"],
+      link: "https://github.com/gaurijoshi1309/devion-ai",
+    },
+    {
+      id: 2,
+      title: "JSCOE Prism",
+      description:
+        "A centralized platform to manage students, teachers, academics, and administration for jspm-prism.",
+      image: "/assets/jspm-prism.png",
+      tags: ["Management System", "Web App", "Java", "Automation"],
+      link: "https://github.com/gaurijoshi1309/jspm-prism",
+    },
+    {
+      id: 3,
       title: "Meal Mitra (Smart Food Donation Webapp)",
+      description:
+        "A smart food donation platform connecting donors with those in need to reduce food waste.",
       image: "/assets/Mealmitra.png",
       tags: ["QA", "Functional Testing", "Integration Testing"],
       link: "https://github.com/gaurijoshi1309/meal-mitra",
     },
     {
-      id: 2,
+      id: 4,
       title: "Load & Stress Testing of User Auth",
+      description:
+        "Comprehensive performance analysis of authentication systems using JMeter and scalability testing.",
       image: "/assets/Loadtesting.jpg",
       tags: ["JMeter", "Performance Testing", "Scalability"],
       link: "https://github.com/gaurijoshi1309/load-testing-project",
@@ -51,6 +73,7 @@ const Projects = () => {
                 ))}
               </div>
               <h3 className="project-title">{project.title}</h3>
+              <p className="project-desc">{project.description}</p>
               <a
                 href={project.link}
                 className="project-link"
