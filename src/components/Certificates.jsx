@@ -29,17 +29,19 @@ const Certificates = () => {
 
   return (
     <section className="certificates-section">
-      <h2 className="certificates-header">Certifications</h2>
+      <div className="container">
+        <h2 className="section-title">Certifications</h2>
 
-      <div className="certificates-grid">
-        {file.map((cert) => (
-          <div key={cert.id} className="certificate-card">
-            <div className="certificate-icon">{cert.icon}</div>
-            <h3 className="certificate-title">{cert.title}</h3>
-            <div className="certificate-issuer">{cert.issuer}</div>
-            <div className="certificate-date">{cert.date}</div>
-          </div>
-        ))}
+        <div className="certificates-grid">
+          {file.map((cert) => (
+            <div key={cert.id} className="certificate-card">
+              <div className="certificate-icon">{cert.icon}</div>
+              <h3 className="certificate-title">{cert.title}</h3>
+              <div className="certificate-issuer">{cert.issuer}</div>
+              <div className="certificate-date">{cert.date}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

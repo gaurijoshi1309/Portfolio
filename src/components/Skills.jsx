@@ -1,73 +1,51 @@
-import {
-  FaJava,
-  FaReact,
-  FaGitAlt,
-  FaDatabase,
-  FaBug,
-  FaTools,
-  FaFileAlt,
-  FaTerminal,
-  FaCode,
-} from "react-icons/fa";
-import {
-  SiSelenium,
-  SiSpringboot,
-  SiPostman,
-  SiJenkins,
-  SiJunit5,
-} from "react-icons/si";
+import React from "react";
+import { FiCpu, FiLayers, FiZap } from "react-icons/fi";
 import "../styles/Skills.css";
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Testing Skills",
-      skills: [
-        { name: "Manual & Automation", icon: <FaBug /> },
-        { name: "API & Performance", icon: <SiPostman /> },
-        { name: "Regression & Functional", icon: <FaTools /> },
-        { name: "Test Design & Document", icon: <FaFileAlt /> },
-      ],
-    },
-    {
-      title: "Tools & Technologies",
-      skills: [
-        { name: "Selenium WebDriver", icon: <SiSelenium /> },
-        { name: "Cucumber & JUnit", icon: <SiJunit5 /> },
-        { name: "JIRA & Git", icon: <FaGitAlt /> },
-        { name: "CI/CD & Jenkins", icon: <SiJenkins /> },
-      ],
-    },
-    {
-      title: "Programming & Databases",
-      skills: [
-        { name: "Java", icon: <FaJava /> },
-        { name: "MySQL & Postgres", icon: <FaDatabase /> },
-        { name: "Python & SQL", icon: <FaTerminal /> },
-        { name: "HTML5", icon: <FaCode /> },
-      ],
-    },
-  ];
-
   return (
     <section className="skills-section">
-      <h2 className="skills-header">Skills & Tech</h2>
-      <p className="skills-subheader">The toolkit I use</p>
+      <div className="container skills-container">
+        <div className="skills-left">
+          <h2 className="section-title">My Skills</h2>
+          <p className="skills-description">
+            I specialize in building robust automation frameworks and scalable
+            Java applications. My expertise spans from backend development with
+            Spring Boot to end-to-end testing with Selenium.
+          </p>
+        </div>
 
-      <div className="skills-grid">
-        {skillCategories.map((category, index) => (
-          <div key={index} className="skill-category">
-            <h3 className="category-title">{category.title}</h3>
-            <div className="category-skills">
-              {category.skills.map((skill, sIndex) => (
-                <div key={sIndex} className="skill-badge" title={skill.name}>
-                  <span className="skill-icon">{skill.icon}</span>
-                  <span className="skill-name">{skill.name}</span>
-                </div>
-              ))}
+        <div className="skills-right">
+          <div className="glass-card skill-row">
+            <div className="skill-icon-box icon-red">
+              <FiCpu />
+            </div>
+            <div className="skill-text">
+              <h4>Automation Testing</h4>
+              <p>Selenium, Cucumber, JUnit, TestNG, Jenkins</p>
             </div>
           </div>
-        ))}
+
+          <div className="glass-card skill-row">
+            <div className="skill-icon-box icon-blue">
+              <FiLayers />
+            </div>
+            <div className="skill-text">
+              <h4>Backend Development</h4>
+              <p>Java, Spring Boot, MySQL, Python, REST APIs</p>
+            </div>
+          </div>
+
+          <div className="glass-card skill-row">
+            <div className="skill-icon-box icon-yellow">
+              <FiZap />
+            </div>
+            <div className="skill-text">
+              <h4>Quality Assurance</h4>
+              <p>Manual Testing, API Testing, Performance Testing</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

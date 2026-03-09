@@ -23,20 +23,24 @@ const Hackathons = () => {
 
   return (
     <section className="hackathons-section">
-      <h2 className="hackathons-header">Achievements</h2>
-      <p className="hackathons-subheader">Recognition & Contributions</p>
+      <div className="container">
+        <h2 className="section-title">Achievements</h2>
+        <p className="section-subtitle" style={{ textAlign: "center" }}>
+          Recognition & Contributions
+        </p>
 
-      <div className="hackathons-timeline">
-        {events.map((event) => (
-          <div key={event.id} className="hackathon-item">
-            <div className="hackathon-date">{event.date}</div>
-            <h3 className="hackathon-title">{event.title}</h3>
-            <p className="hackathon-desc">{event.description}</p>
-            <a href={event.link} className="hackathon-link">
-              View Project
-            </a>
-          </div>
-        ))}
+        <div className="hackathons-timeline">
+          {events.map((event) => (
+            <div key={event.id} className="hackathon-item">
+              <div className="hackathon-date">{event.date}</div>
+              <h3 className="hackathon-title">{event.title}</h3>
+              <p className="hackathon-desc">{event.description}</p>
+              <a href={event.link} className="hackathon-link">
+                View Project
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

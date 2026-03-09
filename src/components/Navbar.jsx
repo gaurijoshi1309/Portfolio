@@ -26,7 +26,7 @@ const Navbar = () => {
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
-    { name: "About", href: "#about" },
+    { name: "About", href: "#about-me" },
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       <div className="navbar-container">
         <div className="navbar-logo">
-          Ga<span>uri.</span>
+          Gauri<span>.</span>
         </div>
 
         <button
@@ -61,7 +61,12 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="#hero" className="btn-primary" onClick={closeMenu}>
+          <a
+            href="/assets/Gauri_Joshi_Resume.pdf"
+            className="nav-resume-btn"
+            download="Gauri_Joshi_Resume.pdf"
+            onClick={closeMenu}
+          >
             Resume
           </a>
         </div>
