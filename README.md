@@ -1,4 +1,4 @@
-# Gauri Joshi | Software Testing Engineer & Developer Portfolio
+# Gauri Joshi | Software Testing Engineer Portfolio
 
 A modern, high-end portfolio website built with React and Vite, showcasing technical expertise in Quality Assurance, Automation, and Development.
 
